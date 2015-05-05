@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE196D781AE8782900FC16FF /* StdControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE196D771AE8782900FC16FF /* StdControl.swift */; };
+		BE196D7C1AE9683F00FC16FF /* ImapCLIExecution.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE196D7B1AE9683F00FC16FF /* ImapCLIExecution.swift */; };
 		BE5A015F1AE042FF00AEC05A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5A015E1AE042FF00AEC05A /* main.swift */; };
+		BE5A01661AE045DB00AEC05A /* CLIOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5A01651AE045DB00AEC05A /* CLIOptions.swift */; };
+		BE988D321AE2B7A500BBD543 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE988D311AE2B7A500BBD543 /* extensions.swift */; };
+		BE988D341AE2FF5000BBD543 /* LogFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE988D331AE2FF5000BBD543 /* LogFile.swift */; };
+		BE988D361AE5A71D00BBD543 /* TCPConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE988D351AE5A71D00BBD543 /* TCPConnection.swift */; };
+		BECEF2931AEA803600A10BE6 /* Terminal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECEF2921AEA803600A10BE6 /* Terminal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +30,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE196D771AE8782900FC16FF /* StdControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StdControl.swift; sourceTree = "<group>"; };
+		BE196D7B1AE9683F00FC16FF /* ImapCLIExecution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImapCLIExecution.swift; sourceTree = "<group>"; };
 		BE5A015B1AE042FF00AEC05A /* imap-cli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "imap-cli"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE5A015E1AE042FF00AEC05A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		BE5A01651AE045DB00AEC05A /* CLIOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLIOptions.swift; sourceTree = "<group>"; };
+		BE988D311AE2B7A500BBD543 /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		BE988D331AE2FF5000BBD543 /* LogFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFile.swift; sourceTree = "<group>"; };
+		BE988D351AE5A71D00BBD543 /* TCPConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCPConnection.swift; sourceTree = "<group>"; };
+		BECEF2921AEA803600A10BE6 /* Terminal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Terminal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,13 @@
 			isa = PBXGroup;
 			children = (
 				BE5A015E1AE042FF00AEC05A /* main.swift */,
+				BE196D771AE8782900FC16FF /* StdControl.swift */,
+				BE988D351AE5A71D00BBD543 /* TCPConnection.swift */,
+				BE196D7B1AE9683F00FC16FF /* ImapCLIExecution.swift */,
+				BECEF2921AEA803600A10BE6 /* Terminal.swift */,
+				BE5A01651AE045DB00AEC05A /* CLIOptions.swift */,
+				BE988D331AE2FF5000BBD543 /* LogFile.swift */,
+				BE988D311AE2B7A500BBD543 /* extensions.swift */,
 			);
 			path = "imap-cli";
 			sourceTree = "<group>";
@@ -118,7 +139,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE988D361AE5A71D00BBD543 /* TCPConnection.swift in Sources */,
 				BE5A015F1AE042FF00AEC05A /* main.swift in Sources */,
+				BE5A01661AE045DB00AEC05A /* CLIOptions.swift in Sources */,
+				BE196D7C1AE9683F00FC16FF /* ImapCLIExecution.swift in Sources */,
+				BE988D341AE2FF5000BBD543 /* LogFile.swift in Sources */,
+				BECEF2931AEA803600A10BE6 /* Terminal.swift in Sources */,
+				BE988D321AE2B7A500BBD543 /* extensions.swift in Sources */,
+				BE196D781AE8782900FC16FF /* StdControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +234,7 @@
 		BE5A01631AE042FF00AEC05A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -213,6 +242,7 @@
 		BE5A01641AE042FF00AEC05A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				OTHER_SWIFT_FLAGS = "-DRELEASE";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -236,6 +266,7 @@
 				BE5A01641AE042FF00AEC05A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
